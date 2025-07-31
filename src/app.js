@@ -23,3 +23,5 @@ window.onload = function() {
   document.getElementById("randomSuit2").innerHTML = carta.palo;
   
 };
+
+
