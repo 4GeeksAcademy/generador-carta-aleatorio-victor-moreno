@@ -16,11 +16,37 @@ window.onload = function() {
 
     return { valor, palo };
   }
+  const contendor = document.getElementById("card");
+
   const carta = cartaAleatoria();
 
-  document.getElementById("numberRandom").innerHTML = carta.valor;
-  document.getElementById("randomSuit").innerHTML = carta.palo;
-  document.getElementById("randomSuit2").innerHTML = carta.palo;
+  
+
+  const paloArriba = document.createElement("div");
+  paloArriba.textContent = carta.palo;
+  paloArriba.className = "figure1"
+  paloArriba.id = "randomSuit";
+  
+
+  const numero = document.createElement("div");
+  numero.textContent = carta.valor
+  numero.className = "number"
+  numero.id = "numberRandom";
+
+  const paloAbajo = document.createElement("div");
+  paloAbajo.textContent = carta.palo;
+  paloAbajo.className = "figure2"
+  paloAbajo.id = "randomSuit2";
+  
+
+  //Añadir elementos a la carta
+  contendor.appendChild(paloArriba);
+  contendor.appendChild(numero);
+  contendor.appendChild(paloAbajo);
+  
+
+ 
+
   
 };
 
